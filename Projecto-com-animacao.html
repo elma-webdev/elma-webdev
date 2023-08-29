@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projecto1.css">
+</head>
+<body>
+    
+<div class="main-box">
+
+        <div class="log-in">
+            <h1 class="text-login">LOGIN</h1>
+        </div>
+
+        <div class="body-part">
+            <div class="body-item">
+                <label for="username">Username </label>
+                    <input type="text" id="username" oninput="CheckInput()">     
+                <label for="password">Password</label>
+                    <input type="password" id="password" oninput="CheckInput()"> 
+                
+         </div>
+
+        
+            <div class="btn-sign-in"><input type="button" value="sign in"></div> 
+
+            <div>
+                <p>Forgot your password?</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    
+    function CheckInput(){
+        
+        let user=document.querySelector('#username').value;
+        let  pass=document.querySelector('#password').value;
+        let btn=document.querySelector('.btn-sign-in')
+
+
+    if(user=="" || pass==""){
+        
+        // btn.style.visibility="hidden";
+        btn.classList.add("try");
+      
+}else{
+    btn.classList.add("tryout");
+    // btn.style.visibility="visible";
+}
+   }
+    
+   let p=document.getElementsByTagName("p")
+  
+</script>
+</body>
+</html>
+
+
+//
