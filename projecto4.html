@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web animada</title>
+    <link rel="stylesheet" href="projecto4.css">
+</head>
+<body>
+
+ 
+
+       <div class="black-screen">
+        
+        //parte 1
+           <div class="do-not-have-account">
+
+                <div>
+                   <h1>Don't have an account?</h1>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur incidunt veniam nam?</p>
+                </div>
+              
+               <div class="sign-up">
+                   <input type="button" value="SIGN UP" class="bott">
+               </div>
+              </div>  
+
+           //parte 2
+           <div class="have-a-acount">
+
+               <div>
+                   <h1 style="line-height: 2.3;">Have an account?</h1>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur incidunt veniam nam?</p>
+               </div>
+               <div class="log-in">
+                   <input type="button" value="LOG IN" class="bott">
+               </div>
+            </div>  
+       </div>
+
+
+
+
+
+<div class="first-form">     
+            <div>
+                <h1 class="h1-form"><strong> SIGN UP </strong></h1>
+            </div>
+
+                <form action="DontHaveAccount" autocomplete="off">
+                <p class="paragrapher-name">Name </p> <input type="text" required class="name-user">
+                Email  <input type="text">
+                Password  <input type="password" required>
+                </form>
+
+
+                <div class="sign-up">
+                    <input type="button" class="botton" value="SIGN UP ">
+                </div>
+           
+           
+</div>
+
+
+<!-- 
+<div>
+        <div class="form-class">
+         
+                <form action="DontHaveAccount" autocomplete="off">   
+                 Email  <input type="email" required>
+                 Password  <input type="password" required>
+                </form> 
+
+              <div class="log-in">
+                   <input type="button" value="LOG IN" class="botton">
+               </div>
+        </div>
+</div> -->
+
+
+<script>
+    
+    const h1=document.querySelector(".h1-form")
+    const paragrapherName=document.querySelector('.paragrapher-name')
+    //selecao das classes
+    const signUp=document.querySelector('.sign-up')
+    const logIn=document.querySelector('.log-in')
+    //selecao do formulario
+    const firstForm=document.querySelector('.first-form')
+    const Name=document.querySelector('.name-user')
+    //selecao do input botton
+    const Button=document.querySelector('.botton')
+    
+
+    // evento do login
+    logIn.addEventListener('click', (e)=>{
+        h1.innerHTML="LOG IN"
+        firstForm.style.background="pink";
+        // transform:translate para fazer ele mudar de lugar
+        firstForm.style.translate="360px";
+        //transitio para move-lo em 2s
+        firstForm.style.transition="2s";
+        //trocar o valor do atributo 'value'
+        Button.setAttribute('value', 'LOG IN')
+        //retirar a borda do input name
+        Name.style.border="none"
+        //remover o paragrafo
+        paragrapherName.innerHTML=""
+        // paragrapherName.remove()
+    })
+    
+    // evento do signup
+    signUp.addEventListener('click', ()=>{
+        h1.innerHTML="SIGN UP"
+        firstForm.style.background="white";
+        firstForm.style.translate="0px";
+        Button.setAttribute('value', 'SIGN UP')
+        Name.style.borderBottom="1px solid rgb(69, 106, 106)"
+        paragrapherName.textContent="Name"
+    })
+</script>
+</body>
+</html>
